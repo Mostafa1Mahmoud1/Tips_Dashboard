@@ -12,13 +12,13 @@ st.set_page_config(page_title = 'Tips Dashboard',
                    initial_sidebar_state='expanded')
 # Loading data 
 
-df = pd.read_csv('D:/Machine Learning/Streamlit/Dashboard/tip.csv')
+df = pd.read_csv('tip.csv')
 
 # Sidebar
 
 st.sidebar.header("Tips Dashboard")
 
-st.sidebar.image("D:/Machine Learning/Streamlit/Dashboard/tips.jpg")
+st.sidebar.image("tips.jpg")
 
 st.sidebar.write("This dashboard is using Tips dataset from Kaggle")
 
@@ -98,4 +98,5 @@ with c3:
                  values = 'tip',
                  color=cat_filter,
                  hole=0.3)
+
     st.plotly_chart(fig,use_container_width=True)
